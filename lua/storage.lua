@@ -18,4 +18,8 @@ boot = function(replicationUser, replicationPassword, delay)
   initializeVersion()
 end
 
+sample = function() 
+  print("I am custom lua function")
+end
+
 -- You can add your own custom code here
