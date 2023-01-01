@@ -2,6 +2,10 @@
 
 # Prerequisites
 
+```
+dart pub get
+```
+
 # Running
 
 ```
