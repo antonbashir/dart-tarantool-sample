@@ -1,6 +1,6 @@
 # Introduction
 
-# Prerequisities
+# Prerequisites
 
 # Running
 
