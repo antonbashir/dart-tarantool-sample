@@ -6,4 +6,6 @@ environment:
 
 dependencies:
   tarantool_storage:
-    path: ../dart-tarantool-storage/binding/dart
+    git: 
+      url: https://github.com/antonbashir/dart-tarantool-storage/
+      path: binding/dart
