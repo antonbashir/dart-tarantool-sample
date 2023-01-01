@@ -17,7 +17,7 @@ dart run tarantool_storage:compile
 ```
 
 ```
-dart run main
+dart run bin/main.dart
 ```
 
 # Description
