@@ -27,7 +27,7 @@ packages:
     description:
       path: "binding/dart"
       ref: HEAD
-      resolved-ref: "5547fd246ec252ae7f54e7e657b6b3f885ee656f"
+      resolved-ref: "04ea2750049d40ff206d29127367e4afd001ae7a"
       url: "https://github.com/antonbashir/dart-tarantool-storage/"
     source: git
     version: "1.0.0"
