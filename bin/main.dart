@@ -8,7 +8,7 @@ import 'package:tarantool_storage_sample/user.dart';
 Future<void> main(List<String> args) async {
   final storage = await Storage();
   storage.boot(StorageBootstrapScript(StorageDefaults.storage())..includeStorageLuaModule(), StorageDefaults.loop());
-  final user = UserSpace(storage.executor().schema());
+  final user = UserSpace(storage.executor.schema);
   await user.create();
   await user.add(User(id: 1, firstname: "anton", surname: "bashirov"));
   await user.add(User(id: 2, firstname: "anton 2", surname: "bashirov 2"));
@@ -20,8 +20,8 @@ Future<void> main(List<String> args) async {
   await user.add(User(id: 2, firstname: "anton 2", surname: "bashirov 2"));
   await user.add(User(id: 3, firstname: "anton 3", surname: "bashirov 3"));
   await user.stream().forEach(print);
-  await storage.executor().executeLua("sample");
-  await storage.executor().executeNative(storage.loadModuleByName("dart-tarantool-sample").library.lookup("sample"));
+  await storage.executor.lua.call("sample");
+  await storage.executor.native.call(storage.loadModuleByName("dart-tarantool-sample").library.lookup("sample"));
   storage.shutdown();
   exit(0);
 }

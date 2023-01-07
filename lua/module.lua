@@ -1,0 +1,1 @@
+sample = function() print("Hello, lua!") end
