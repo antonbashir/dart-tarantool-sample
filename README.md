@@ -37,5 +37,6 @@ dart run bin/main.dart
 You can run sample with Docker. 
 
 `docker build -t sample .` - build image
+
 `docker run sample` - run container
 
