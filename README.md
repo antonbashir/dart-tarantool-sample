@@ -32,4 +32,10 @@ dart run tarantool_storage:compile
 dart run bin/main.dart
 ```
 
-# Description
+# Docker
+
+You can run sample with Docker. 
+
+`docker build -t sample .` - build image
+`docker run sample` - run container
+
