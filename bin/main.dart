@@ -7,7 +7,7 @@ import 'package:tarantool_storage_sample/user.dart';
 
 Future<void> main(List<String> args) async {
   final storage = await Storage();
-  storage.boot(StorageBootstrapScript(StorageDefaults.storage())..includeStorageLuaModule(), StorageDefaults.loop());
+  storage.boot(StorageBootstrapScript(StorageDefaults.storage().copyWith(listen: "${Directory.current.path}/module.socket"))..includeStorageLuaModule(), StorageDefaults.loop());
   final user = UserSpace(storage.executor.schema);
   await user.create();
   await user.add(User(id: 1, firstname: "anton", surname: "bashirov"));
