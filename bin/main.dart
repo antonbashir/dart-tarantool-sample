@@ -21,7 +21,7 @@ Future<void> main(List<String> args) async {
   await user.add(User(id: 3, firstname: "anton 3", surname: "bashirov 3"));
   await user.stream().forEach(print);
   await storage.executor.lua.call("sample");
-  await storage.executor.native.call(storage.loadModuleByName("dart-tarantool-sample").library.lookup("sample"));
+  await storage.executor.native.call(storage.loadModuleByName(Directory.current.path.split("/").last).library.lookup("sample"));
   storage.shutdown();
   exit(0);
 }

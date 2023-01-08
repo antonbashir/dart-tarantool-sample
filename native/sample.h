@@ -1,7 +1,7 @@
 #ifndef SAMPLE_H_INCLUDED
 #define SAMPLE_H_INCLUDED
 
-#include "extension.h"
+#include "module.h"
 
 #if defined(__cplusplus)
 extern "C"
