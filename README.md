@@ -1,6 +1,3 @@
-# Introduction
-This is a small example of using Dart Tarantool Storage
-
 # Prerequisites
 Install [Dart](https://dart.dev/get-dart)
 
